@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 import pandas as pd
 import numpy as np
-import pickle
+import joblib
 
 app = Flask(__name__)
 
@@ -39,7 +39,7 @@ def result():
         data = np.array(pred_args)
         data = data.reshape(1, 17)
 
-        model = pickle.load(open('heart_disease_pred_model', 'rb'))
+        model = joblib.load(open('heart_disease_pred_model.pkl', 'rb'))
         prediction = model.predict(data)
 
         if prediction == 1:
