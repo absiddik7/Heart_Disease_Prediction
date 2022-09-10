@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Heart Disease</title>
+</head>
+
+<body>
+    <!---Nav Bar--->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!---End Nav Bar--->
+
+    <!---Heading--->
+    <div class="heading">
+        <h1 class="text-center">Heart Disease Prediction</h1>
+    </div>
+    <!---End Heading--->
+
+
+    <!---Input Form--->
+
+    <div class="float-container">
+        <!---Input Forms--->
+        <div class="float-child">
+            <strong>Enter the details of your personal info to get a heart disease prediction</strong>
+            <p></p>
+            <form action="/result" method="POST">
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Gender</label>
+                    <select class="form-control" name="gender" id="exampleFormControlSelect1">
+                        <option value="" selected>Choose...</option>
+                        <option value="1.0">Male</option>
+                        <option value="0.0">Female</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Age Category</label>
+                    <select class="form-control" name="Age Category" id="exampleFormControlSelect1">
+                        <option selected>Choose...</option>
+                        <option value="0">18-24</option>
+                        <option value="1">25-29</option>
+                        <option value="2">30-34</option>
+                        <option value="3">35-39</option>
+                        <option value="4">40-44</option>
+                        <option value="5">45-49</option>
+                        <option value="6">50-54</option>
+                        <option value="7">55-59</option>
+                        <option value="8">60-64</option>
+                        <option value="9">65-69</option>
+                        <option value="10">70-74</option>
+                        <option value="11">75-79</option>
+                        <option value="12">80 or older</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Race</label>
+                    <select class="form-control" name="Race" id="exampleFormControlSelect1">
+                        <option value="" selected>Choose...</option>
+                        <option value="5.0">White</option>
+                        <option value="2.0">Black</option>
+                        <option value="1.0">Asian</option>
+                        <option value="0.0">American Indian/Alaskan Native</option>
+                        <option value="3.0">Hispanic</option>
+                        <option value="4.0">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="BMI">BMI</label>
+                    <input type="number" step="any" name="Bmi" class="form-control" id="bmi" placeholder="">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Sleep Time</label>
+                    <input type="number" class="form-control" name="Sleep Time" id="exampleFormControlInput1"
+                        placeholder="">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Smoking</label>
+                    <select class="form-control" name="Smoking" id="exampleFormControlSelect1">
+                        <option value="" selected>Choose...</option>
+                        <option value="1.0">Yes</option>
+                        <option value="0.0">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Alcohol Drinking</label>
+                    <select class="form-control" name="Alcohol Drinking" id="exampleFormControlSelect1">
+                        <option value="" selected>Choose...</option>
+                        <option value="1.0">Yes</option>
+                        <option value="0.0">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Stroke</label>
+                    <select class="form-control" name="Stroke" id="exampleFormControlSelect1">
+                        <option value="" selected>Choose...</option>
+                        <option value="1.0">Yes</option>
+                        <option value="0.0">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Diabetic</label>
+                    <select class="form-control" name="Diabetic" id="exampleFormControlSelect1">
+                        <option value="" selected>Choose...</option>
+                        <option value="2.0">Yes</option>
+                        <option value="0.0">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Asthma</label>
+                    <select class="form-control" name="Asthma" id="exampleFormControlSelect1">
+                        <option value="" selected>Choose...</option>
+                        <option value="1.0">Yes</option>
+                        <option value="0.0">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Kidney Disease</label>
+                    <select class="form-control" name="Kidney Disease" id="exampleFormControlSelect1">
+                        <option value="" selected>Choose...</option>
+                        <option value="1.0">Yes</option>
+                        <option value="0.0">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Skin Cancer</label>
+                    <select class="form-control" name="Skin Cancer" id="exampleFormControlSelect1">
+                        <option value="" selected>Choose...</option>
+                        <option value="1.0">Yes</option>
+                        <option value="0.0">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Difficulty Walking</label>
+                    <select class="form-control" name="Difficulty Walking" id="exampleFormControlSelect1">
+                        <option value="" selected>Choose...</option>
+                        <option value="1.0">Yes</option>
+                        <option value="0.0">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Physical Activity</label>
+                    <select class="form-control" name="Physical Activity" id="exampleFormControlSelect1">
+                        <option value="" selected>Choose...</option>
+                        <option value="1.0">Yes</option>
+                        <option value="0.0">No</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="">Physical Health</label>
+                    <input type="number" class="form-control" name="Physical Health" id="exampleFormControlInput1"
+                        placeholder="">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Mental Health</label>
+                    <input type="number" class="form-control" name="Mental Health" id="exampleFormControlInput1"
+                        placeholder="">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">General Health</label>
+                    <select class="form-control" name="General Health" id="exampleFormControlSelect1">
+                        <option value="" selected>Choose...</option>
+                        <option value="0.0">Excellent</option>
+                        <option value="4.0">Very Good</option>
+                        <option value="2.0">Good</option>
+                        <option value="1.0">Fair</option>
+                        <option value="3.0">Poor</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+        <!---End Input Forms--->
+
+        <!---Input Details--->
+        <div class="float-child">
+            <div>
+                <h4>Input Details</h4>
+                <p>
+                    <strong>Gender:</strong> Are you male or female? <br>
+                    <strong>Age Category:</strong> Your age category<br>
+                    <strong>Race:</strong> Which race do you belong to?<br>
+                    <strong>BMI:</strong> Your Body Mass Index (BMI) <br>
+                    <strong>Sleep Time:</strong> On average, how many hours of sleep do you get in a 24-hour period?
+                    <br>
+                    <strong>Smoking:</strong> Have you smoked at least 100 cigarettes in your entire life? <br>
+                    <strong>Alcohol Drinking:</strong> Do you drink alcoholic drinks? <br>
+                    <strong>Stroke:</strong> Have you ever had a stroke?<br>
+                    <strong>Diabetic:</strong> Do you have diabetes? <br>
+                    <strong>Asthma:</strong> Do you have asthma? <br>
+                    <strong>Kidney Disease:</strong> Not including kidney stones, bladder infection or incontinence,
+                    were you ever told you had kidney disease? <br>
+                    <strong>Skin Cancer:</strong> Have you ever had a skin cancer? <br>
+                    <strong>Difficulty Walking:</strong> Do you have serious difficulty walking or climbing stairs? <br>
+                    <strong>Physical Activity:</strong> Physical activity or exercise during the past 30 days other than
+                    regular job <br>
+                    <strong>Physical Health:</strong> Now thinking about your physical health, which includes physical
+                    illness and injury, for how many days during the past 30 <br>
+                    <strong>Mental Health:</strong> Thinking about your mental health, for how many days during the past
+                    30 days was your mental health not good? <br>
+                    <strong>General Health:</strong> Would you say that in general your health is... <br>
+                </p>
+            </div>
+        </div>
+        <!---End Input Details--->
+
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

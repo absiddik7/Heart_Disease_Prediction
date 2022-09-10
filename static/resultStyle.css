@@ -1,0 +1,31 @@
+body {
+
+    background: linear-gradient(to left, #667292 0%, #a2b9bc 100%);
+}
+
+.heading{
+    background-color: tomato;
+  }
+
+.centerdiv {
+    height: 15vh;
+    display: flex;
+    align-items: center;
+}
+
+.centerdiv a {
+    height: 30px;
+    width: 30px;
+    background-color: #f5f6fa;
+    border-radius: 50px;
+    text-align: center;
+    margin: 5px;
+    line-height: 30px;
+    position: relative;
+    overflow: hidden;
+    
+}
+
+.centerdiv a i {
+    transition: all 0.3s linear;
+}
