@@ -11,7 +11,7 @@ def main():
     return render_template("main.html")
 
 
-@app.route("/result", methods=["POST"])
+"""@app.route("/result", methods=["POST"])
 def result():
     if request.method == "POST":
         gender = request.form.get("gender")
@@ -45,8 +45,8 @@ def result():
         if prediction == 1:
             return render_template("result.html", result="You probably have heart disease")
         else:
-             return render_template("result.html", result="You probably don't have heart disease")
+             return render_template("result.html", result="You probably don't have heart disease")"""
 
    
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
