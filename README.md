@@ -8,3 +8,5 @@ https://heart-disease-predictor01.herokuapp.com/
 
 # Application UI
 ![screenshot-heart-disease-predictor01 herokuapp com-2022 09 12-20_00_25](https://user-images.githubusercontent.com/49263226/189678564-9a726bfa-4f3d-4390-bf68-186c5845f00a.png)
+
+![screenshot-heart-disease-predictor01 herokuapp com-2022 09 12-20_00_25](https://user-images.githubusercontent.com/49263226/189678585-8164afa1-96c1-4e40-9b42-b0d1433d560b.png)
