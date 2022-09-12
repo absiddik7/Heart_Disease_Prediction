@@ -7,3 +7,4 @@ The aim is to build a heart disease classifier and model deployment on the web. 
 https://heart-disease-predictor01.herokuapp.com/
 
 # Application UI
+![screenshot-heart-disease-predictor01 herokuapp com-2022 09 12-20_00_25](https://user-images.githubusercontent.com/49263226/189678564-9a726bfa-4f3d-4390-bf68-186c5845f00a.png)
